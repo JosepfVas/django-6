@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "django-6"
+version = "0.1.0"
+description = ""
+authors = ["Josef"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "4.2.2"
+pillow = "^10.3.0"
+redis = "^5.0.4"
+psycopg2 = "^2.9.9"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

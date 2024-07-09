@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+{% extends 'client/base.html' %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .content {
+        display: flex;
+        max-width: 12000px;
+        width: 100%;
+    }
+    .blogs {
+        flex: 2;
+        display: flex;
+        justify-content: space-around;
+    }
+    .card {
+        width: 30%;
+        margin: 10px;
+    }
+    .sidebar {
+        flex: 1;
+        background: #f9f9f9;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .sidebar p {
+        font-size: 14px;
+        color: #333;
+    }
+</style>
+</head>
+<head>
+    <div>
+        <div class="container d-flex flex-column justify-content-center align-items-center" style="height: 20vh;">
+            <div class="row py-lg-4">
+                <div class="col text-center">
+                    <h1 class="fw-light">Добро пожаловать!</h1>
+                    <p class="lead text-body-secondary">Представляем вашему вниманию наш сервис для рассылок различных
+                        сообщений.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="blogs">
+            {% for article in random_articles %}
+            <div class="card">
+                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <p class="card-text">{{ article.short_description }}</p>
+                    <a href="{% url 'blog:blog_detail' article.pk %}" class="btn btn-primary">Просмотр</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="sidebar">
+            <h2>Статистика</h2>
+            <p>Количество рассылок всего: {{ total_mailings }}</p>
+            <p>Количество активных рассылок: {{ active_mailings }}</p>
+            <p>Количество уникальных клиентов для рассылок: {{ unique_clients }}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}
+
+

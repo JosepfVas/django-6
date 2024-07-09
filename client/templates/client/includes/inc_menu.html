@@ -1,0 +1,41 @@
+<div class="collapse text-bg-dark" id="navbarHeader">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+                <h4>О нас</h4>
+                <p class="text-body-secondary">Мы - ваш надежный партнер в создании здорового образа жизни и радостных
+                    моментов. В нашем ассортименте только самые свежие и качественные овощи и фрукты, которые не только
+                    дарят радость своим вкусом, но и поддерживают ваше здоровье. Мы гордимся тем, что каждый день
+                    предлагаем вам лучшее из мира природы, чтобы вы могли наслаждаться вкусом и получать максимум пользы
+                    для своего организма. Доверьтесь нам и делайте свой выбор в пользу здоровья и радости!"</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+                <h4>Навигация</h4>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'messenger:home' %}" class="text-white">Главная</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'users:logout' %}" class="text-white">Выход</a></li>
+                    {% else %}
+                    <li><a href="{% url 'users:login' %}" class="text-white">Вход</a></li>
+                    <li><a href="{% url 'users:register' %}" class="text-white">Регистрация</a></li>
+                    <li><a href="{% url 'users:password_reset' %}" class="text-white">Забыли пароль?</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'client:client_list' %}" class="text-white">Клиенты</a></li>
+                    <li><a href="{% url 'messenger:message_list' %}" class="text-white">Сообщения</a></li>
+                    <li><a href="{% url 'messenger:mailing_list' %}" class="text-white">Рассылки</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Меню</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>

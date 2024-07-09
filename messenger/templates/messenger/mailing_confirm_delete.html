@@ -1,0 +1,20 @@
+{% extends 'client/base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <form class="row" method="post" enctype="multipart/form-data">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text"> Хотите удалить рассылку?</p>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Удалить</button>
+                            <a class="btn btn-dark" href="{% url 'messenger:mailing_list' %}" role="button">Назад</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

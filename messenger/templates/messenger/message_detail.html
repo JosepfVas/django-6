@@ -1,0 +1,28 @@
+{% extends 'messenger/base.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-title"><p class="card-text">{{ object.slug }}</p>
+                        <div class="card-body">
+                            <p class="card-text">Название: {{ object.subject }}</p>
+                            <p class="card-text">Контекст: {{ object.body }}</p>
+                            <p class="card-text">Добавил пользователь: {{object.owner}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a class="btn btn-primary" href="{% url 'messenger:message_list' %}"
+                                       role="button">Назад</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

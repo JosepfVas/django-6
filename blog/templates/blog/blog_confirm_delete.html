@@ -1,0 +1,19 @@
+﻿
+{% extends 'client/base.html' %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+    <h5 class="text-center">Действительно желаете удалить '{{object.title}}'?</h5>
+        <div class="text-center">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <a class="btn btn-light m-3" href="{% url 'blog:blog_detail' object.pk %}">Отменить</a>
+                <button type="submit" class="btn btn-danger m-3">Да, удалить</button>
+            </form>
+        </div>
+</div>
+
+{% endblock %}

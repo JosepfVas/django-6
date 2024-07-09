@@ -1,0 +1,42 @@
+[
+{
+  "model": "client.client",
+  "pk": 3,
+  "fields": {
+    "email": "yovzhi@icloud.com",
+    "full_name": "Josef Vas",
+    "comment": "ads",
+    "owner": null
+  }
+},
+{
+  "model": "client.client",
+  "pk": 4,
+  "fields": {
+    "email": "test@mail.com",
+    "full_name": "asdasd qweqe",
+    "comment": "фыв",
+    "owner": null
+  }
+},
+{
+  "model": "client.client",
+  "pk": 5,
+  "fields": {
+    "email": "testtestov@mail.test",
+    "full_name": "testow test",
+    "comment": "sadsdad",
+    "owner": null
+  }
+},
+{
+  "model": "client.client",
+  "pk": 6,
+  "fields": {
+    "email": "testowner@mail.com",
+    "full_name": "owner ownerow",
+    "comment": "asd",
+    "owner": 3
+  }
+}
+]

@@ -1,0 +1,24 @@
+﻿{% extends 'client/base.html' %}
+{% block content %}
+<br>
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>Активация(деактивация) пользователя {{object.email}}</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-success">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

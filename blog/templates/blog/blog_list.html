@@ -1,0 +1,38 @@
+﻿{% extends 'client/base.html' %}
+
+{% block content %}
+<br>
+<div class="container">
+    <div class="text-end">
+        {% if user.is_superuser %}
+        <a class="btn btn-outline-secondary" href="{% url 'blog:blog_create' %}">Добавить статью</a>
+        {% endif %}
+    </div>
+    <br>
+    <div class="row">
+        {% for object in object_list %}
+
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                    {{object.title}}
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">{{object.body|slice:":100"}}</p>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'blog:blog_detail' object.pk %}" class="btn btn-primary">Подробнее</a>
+                    {% endif %}
+
+                </div>
+                <div class="card-footer">
+                    <h6>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

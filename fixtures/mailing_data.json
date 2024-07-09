@@ -1,0 +1,65 @@
+[
+{
+  "model": "messenger.mailing",
+  "pk": 30,
+  "fields": {
+    "first_send_time": "2024-06-09T17:58:29Z",
+    "last_send_time": "2024-06-09T17:54:32Z",
+    "next_send_time": null,
+    "periodicity": "daily",
+    "status": "created",
+    "message": 2,
+    "owner": null,
+    "client": []
+  }
+},
+{
+  "model": "messenger.mailing",
+  "pk": 31,
+  "fields": {
+    "first_send_time": "2024-06-09T15:57:17Z",
+    "last_send_time": "2024-06-19T16:57:23Z",
+    "next_send_time": "2024-06-09T15:59:41Z",
+    "periodicity": "daily",
+    "status": "started",
+    "message": 1,
+    "owner": null,
+    "client": [
+      3
+    ]
+  }
+},
+{
+  "model": "messenger.mailing",
+  "pk": 32,
+  "fields": {
+    "first_send_time": "2024-06-09T18:25:48Z",
+    "last_send_time": "2024-06-09T18:31:50Z",
+    "next_send_time": null,
+    "periodicity": "daily",
+    "status": "created",
+    "message": 1,
+    "owner": null,
+    "client": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "messenger.mailing",
+  "pk": 33,
+  "fields": {
+    "first_send_time": "2024-07-05T17:25:00Z",
+    "last_send_time": "2024-07-10T17:25:00Z",
+    "next_send_time": "2024-07-06T17:25:00Z",
+    "periodicity": "daily",
+    "status": "created",
+    "message": 3,
+    "owner": 3,
+    "client": [
+      6
+    ]
+  }
+}
+]

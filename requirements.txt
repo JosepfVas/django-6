@@ -1,0 +1,8 @@
+﻿django==4.2.2
+pillow==10.3.0
+redis==5.0.4
+psycopg2-binary==2.9.9
+python-dotenv==1.0.1
+django-apscheduler==0.6.2
+pytz==2024.1
+celery==5.2.3
